@@ -7,6 +7,7 @@ import StreakTracker from "@/components/StreakTracker";
 import TopRepos from "@/components/TopRepos";
 import PinnedRepos from "@/components/PinnedRepos";
 import LanguageBreakdown from "@/components/LanguageBreakdown";
+import CommitTimeChart from "@/components/CommitTimeChart";
 import IssueMetrics from "@/components/IssueMetrics";
 import StreakAtRiskBanner from "@/components/StreakAtRiskBanner";
 import FriendComparison from "@/components/FriendComparison";
@@ -42,10 +43,11 @@ export default async function DashboardPage() {
         </div>
       </div>
 
-      {/* Row 2: PR metrics + PR breakdown */}
-      <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {/* Row 2: PR metrics, PR breakdown & Time Chart */}
+      <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <PRMetrics />
         <PRBreakdownChart />
+        <CommitTimeChart />
       </div>
 
       {/* Row 3: Issue metrics */}
