@@ -36,10 +36,10 @@ export default function BadgeSection({ username }: BadgeSectionProps) {
           <h3 className="mb-2 font-medium text-[var(--card-foreground)] text-sm">
             Streak Badge
           </h3>
+          <div className="mb-2">
+            <img src={streakBadgeUrl} alt="DevTrack Streak" />
+          </div>
           <CopyableCodeBlock code={streakMarkdown} />
-          <p className="mt-2 text-xs text-[var(--muted-foreground)]">
-            Preview: Display your current commit streak
-          </p>
         </div>
 
         {/* Commits Badge */}
@@ -47,10 +47,10 @@ export default function BadgeSection({ username }: BadgeSectionProps) {
           <h3 className="mb-2 font-medium text-[var(--card-foreground)] text-sm">
             Commits Badge
           </h3>
+          <div className="mb-2">
+            <img src={commitsBadgeUrl} alt="DevTrack Commits" />
+          </div>
           <CopyableCodeBlock code={commitsMarkdown} />
-          <p className="mt-2 text-xs text-[var(--muted-foreground)]">
-            Preview: Show commits from this month
-          </p>
         </div>
 
         {/* Combined */}
@@ -58,10 +58,11 @@ export default function BadgeSection({ username }: BadgeSectionProps) {
           <h3 className="mb-2 font-medium text-[var(--card-foreground)] text-sm">
             Combined (Both Badges)
           </h3>
+          <div className="mb-2 flex gap-1">
+            <img src={streakBadgeUrl} alt="DevTrack Streak" />
+            <img src={commitsBadgeUrl} alt="DevTrack Commits" />
+          </div>
           <CopyableCodeBlock code={combinedMarkdown} />
-          <p className="mt-2 text-xs text-[var(--muted-foreground)]">
-            Preview: Show both stats side-by-side
-          </p>
         </div>
       </div>
 
